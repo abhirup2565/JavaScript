@@ -96,13 +96,32 @@ is a multilen comments */
 //-------------------------------------------------------------------------
 //const if value is constant
 //convention to use uppercase (exception string)
-const PI = 3.14159;
-let radius;
-let circumference;
 
-radius = window.prompt("Enter the radius of circle");
-radius = Number(radius);
+// const PI = 3.14159;
+// let radius;
+// let circumference;
+// radius = window.prompt("Enter the radius of circle");
+// radius = Number(radius);
+// circumference=2*PI*radius;
+// console.log(circumference)
 
-circumference=2*PI*radius;
+//-----------------------------------------------------------------------------
+//counter
+const decreaseBtn=document.getElementById("decreaseBtn");
+const resetBtn=document.getElementById("resetBtn");
+const increaseBtn=document.getElementById("increaseBtn");
+const countLabel =document.getElementById("countLabel");
+let count =0;
 
-console.log(circumference)
+increaseBtn.onclick=function(){
+    count++;
+    countLabel.textContent=count;
+}
+decreaseBtn.onclick=function(){
+    count--;
+    countLabel.textContent=count;
+}
+resetBtn.onclick=function(){
+    count=0;
+    countLabel.textContent=count;
+}
