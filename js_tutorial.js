@@ -108,6 +108,7 @@ console.log(add(5,3));
 
 //closures
 // var msg="abhipreet";
+/*
 function outer(msg){
     
     function inner()
@@ -118,3 +119,14 @@ function outer(msg){
 }
 let a = outer("hi");
 a();
+*/
+
+//map reduce filter
+nums=[1,2,3,4,5,6,7,8,9];
+let map=nums.map((num)=>2*num);
+let filter=nums.filter((num)=>num%2===0);
+let reduce = nums.reduce((sum,num)=>sum+num,0);
+
+console.log(map);
+console.log(filter);
+console.log(reduce);
