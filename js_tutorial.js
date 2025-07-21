@@ -98,8 +98,23 @@ console.log(operations(subs));
 */
 
 //arrow function
-let add = (a,b) =>
+/*
+let add = (a,b)=>
 {
     return a+b;
 }
 console.log(add(5,3));
+*/
+
+//closures
+// var msg="abhipreet";
+function outer(msg){
+    
+    function inner()
+    {
+        console.log(`Hello how are you ${msg}`);
+    }
+    return inner;
+}
+let a = outer("hi");
+a();
