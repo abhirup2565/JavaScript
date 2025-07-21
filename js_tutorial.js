@@ -55,6 +55,9 @@ function creatingCourse(coursename)
 creatingCourse("hld") 
 creatingCourse("lld") 
 */
+
+
+/*
 console.log(a);
 creatingCourse(a);
 creatingCourse("hld");
@@ -66,4 +69,12 @@ var a ="abhirup";
 creatingCourse("hld");
 creatingCourse("lld");
 console.log(a);
+*/
+
+//first class variable
+let add =function (a,b)
+{
+    return a+b;
+}
+console.log(add(5,3));
 
