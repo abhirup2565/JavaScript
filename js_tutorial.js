@@ -81,10 +81,10 @@ console.log(add(5,3));
 */
 
 //higher order function
+/*
 function operations(operation)
 {
-    console.log(operation(5,3));
-    operation(5,3);
+    return operation(5,3);
 }
 function add (a,b)
 {
@@ -95,3 +95,11 @@ function subs (a,b)
     return a-b;
 }
 console.log(operations(subs));
+*/
+
+//arrow function
+let add = (a,b) =>
+{
+    return a+b;
+}
+console.log(add(5,3));
