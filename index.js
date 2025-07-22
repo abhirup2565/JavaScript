@@ -128,24 +128,32 @@ is a multilen comments */
 
 //------------------------------------------------
 //Math build in object
-let x =3;
-let y=2;
-let z=1;
+// let x =3;
+// let y=2;
+// let z=1;
 
-z=Math.round(x);
-z=Math.floor(x);
-z=Math.ceil(x);
-z=Math.trunc(x);
-z=Math.pow(x,y);
-z=Math.sqrt(81);
-z=Math.log(x);
-z=Math.sin(1);
-z=Math.cos(0);
-z=Math.tan(x);
-z=Math.abs(-25);
-z=Math.sign(-8);
-z=Math.max(x,y,z);
-a=Math.min(x,y,z);
-console.log(a);
+// z=Math.round(x);
+// z=Math.floor(x);
+// z=Math.ceil(x);
+// z=Math.trunc(x);
+// z=Math.pow(x,y);
+// z=Math.sqrt(81);
+// z=Math.log(x);
+// z=Math.sin(1);
+// z=Math.cos(0);
+// z=Math.tan(x);
+// z=Math.abs(-25);
+// z=Math.sign(-8);
+// z=Math.max(x,y,z);
+// a=Math.min(x,y,z);
+// console.log(a);
 
 //------------------------------------------
+//random
+let randomNum=Math.random();
+console.log(Math.floor(randomNum*6)+1);
+//random range 
+let min=50;
+let max=100;
+console.log(Math.floor(randomNum*(max-min))+min);
+
