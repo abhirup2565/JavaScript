@@ -158,14 +158,15 @@ is a multilen comments */
 // console.log(Math.floor(randomNum*(max-min))+min);
 
 //-----------Roll dice-----------------------
-let roll=document.getElementById("submit");
-let display=document.getElementById("display");
-let min=0;
-let max=6;
-let random;
-roll.onclick=function(){
-    random=(Math.random()*(max-min))+min;
-    display.textContent=random
-}
-
+// let roll=document.getElementById("submit");
+// let display=document.getElementById("display");
+// let min=0;
+// let max=6;
+// let random;
+// roll.onclick=function(){
+//     random=(Math.random()*(max-min))+min;
+//     display.textContent=random;
+// }
+//------------------------------------------------
+//if statement
 
