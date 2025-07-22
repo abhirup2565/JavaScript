@@ -150,10 +150,22 @@ is a multilen comments */
 
 //------------------------------------------
 //random
-let randomNum=Math.random();
-console.log(Math.floor(randomNum*6)+1);
-//random range 
-let min=50;
-let max=100;
-console.log(Math.floor(randomNum*(max-min))+min);
+// let randomNum=Math.random();
+// console.log(Math.floor(randomNum*6)+1);
+// //random range 
+// let min=50;
+// let max=100;
+// console.log(Math.floor(randomNum*(max-min))+min);
+
+//-----------Roll dice-----------------------
+let roll=document.getElementById("submit");
+let display=document.getElementById("display");
+let min=0;
+let max=6;
+let random;
+roll.onclick=function(){
+    random=(Math.random()*(max-min))+min;
+    display.textContent=random
+}
+
 
