@@ -107,21 +107,45 @@ is a multilen comments */
 
 //-----------------------------------------------------------------------------
 //counter
-const decreaseBtn=document.getElementById("decreaseBtn");
-const resetBtn=document.getElementById("resetBtn");
-const increaseBtn=document.getElementById("increaseBtn");
-const countLabel =document.getElementById("countLabel");
-let count =0;
+// const decreaseBtn=document.getElementById("decreaseBtn");
+// const resetBtn=document.getElementById("resetBtn");
+// const increaseBtn=document.getElementById("increaseBtn");
+// const countLabel =document.getElementById("countLabel");
+// let count =0;
 
-increaseBtn.onclick=function(){
-    count++;
-    countLabel.textContent=count;
-}
-decreaseBtn.onclick=function(){
-    count--;
-    countLabel.textContent=count;
-}
-resetBtn.onclick=function(){
-    count=0;
-    countLabel.textContent=count;
-}
+// increaseBtn.onclick=function(){
+//     count++;
+//     countLabel.textContent=count;
+// }
+// decreaseBtn.onclick=function(){
+//     count--;
+//     countLabel.textContent=count;
+// }
+// resetBtn.onclick=function(){
+//     count=0;
+//     countLabel.textContent=count;
+// }
+
+//------------------------------------------------
+//Math build in object
+let x =3;
+let y=2;
+let z=1;
+
+z=Math.round(x);
+z=Math.floor(x);
+z=Math.ceil(x);
+z=Math.trunc(x);
+z=Math.pow(x,y);
+z=Math.sqrt(81);
+z=Math.log(x);
+z=Math.sin(1);
+z=Math.cos(0);
+z=Math.tan(x);
+z=Math.abs(-25);
+z=Math.sign(-8);
+z=Math.max(x,y,z);
+a=Math.min(x,y,z);
+console.log(a);
+
+//------------------------------------------
