@@ -366,3 +366,19 @@ console.log(str.padEnd(20,"n"));
 //     console.log(fruit);
 
 // }
+
+//----------------spread operator----------
+//... unpacks iterables like array string
+// let fruits=["Apple","Banana","Grapes","Mango"];
+// console.log(...fruits);
+
+//---------------rest parameter------------
+// rest parameter bundle sperate element in an  array. 
+// opposite to spread op
+
+
+function eat(...fruits)
+{
+    console.log(fruits);
+}
+eat("mango","banana","grapes","Apple")
