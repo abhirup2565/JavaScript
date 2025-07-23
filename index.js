@@ -169,4 +169,13 @@ is a multilen comments */
 // }
 //------------------------------------------------
 //if statement
-
+let age=13;
+if(age>18){
+    console.log("you are an adult");
+}
+else if(age>13){
+    console.log("you are teen");
+}
+else{
+    console.log("you are a kid");
+}
