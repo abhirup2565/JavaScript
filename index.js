@@ -332,8 +332,8 @@ console.log(str.padEnd(20,"n"));
 // window.alert("You are correct");
 
 //-------------functions----------------------
-function even(num)
-{
-    return num%2===0?true:false;
-}
-console.log(even(6));
+// function even(num)
+// {
+//     return num%2===0?true:false;
+// }
+// console.log(even(6));
