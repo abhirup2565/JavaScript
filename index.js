@@ -169,7 +169,8 @@ is a multilen comments */
 // }
 //------------------------------------------------
 //if statement
-
+//check property
+/*
 let submit=document.getElementById('submit');
 let display=document.getElementById('display');
 let male=document.getElementById('male');
@@ -194,7 +195,16 @@ submit.onclick=function(){
         display.textContent=`you are a kid `;
     }
 }
-
+*/
+//ternary operator
+let submit=document.getElementById('submit');
+let display=document.getElementById('display');
+let age;
+submit.onclick=function(){
+    age= document.getElementById('age').value;
+    display.textContent=age>18?`you are adult `:`You are not an adult`;
+    
+}
 
 
 
