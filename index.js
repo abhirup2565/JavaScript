@@ -196,14 +196,44 @@ submit.onclick=function(){
     }
 }
 */
+
+
 //ternary operator
+/*
 let submit=document.getElementById('submit');
 let display=document.getElementById('display');
 let age;
 submit.onclick=function(){
     age= document.getElementById('age').value;
-    display.textContent=age>18?`you are adult `:`You are not an adult`;
-    
+    display.textContent=age>18?`you are adult `:`You are not an adult`;   
+}
+*/
+
+//switches
+let day=5;
+switch(day)
+{
+    case 1:
+        console.log("monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("wednesday");
+        break;
+    case 4:
+        console.log("thursday");
+        break;
+    case 5:
+        console.log("friday");
+        break;
+    case 6:
+        console.log("saturday");
+        break;
+    case 7:
+        console.log("sunday");
+        break;
 }
 
 
