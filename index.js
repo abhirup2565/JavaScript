@@ -320,15 +320,20 @@ console.log(str.padEnd(20,"n"));
 // }
 
 //-------------number guessing game--------------------
-const max = 10;
-const min = 0;
-const ANS=Math.round((Math.random()*(max-min))+min);
-console.log(ANS)
-let guess;
-while(guess!==ANS)
+// const max = 10;
+// const min = 0;
+// const ANS=Math.round((Math.random()*(max-min))+min);
+// console.log(ANS)
+// let guess;
+// while(guess!==ANS)
+// {
+//     guess=Number(window.prompt("guess the no between 0 and 10"));
+// }
+// window.alert("You are correct");
+
+//-------------functions----------------------
+function even(num)
 {
-    guess=Number(window.prompt("guess the no between 0 and 10"));
+    return num%2===0?true:false;
 }
-window.alert("You are correct");
-
-
+console.log(even(6));
