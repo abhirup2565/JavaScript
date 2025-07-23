@@ -209,7 +209,8 @@ submit.onclick=function(){
 }
 */
 
-//switches
+//---------------switches----------
+/*
 let day=5;
 switch(day)
 {
@@ -235,6 +236,37 @@ switch(day)
         console.log("sunday");
         break;
 }
+*/
 
+//String methods
+// charAt()
+// indexOf()
+// lastIndexOf()
+// length
+// trim()
+// toUpperCase()
+// toLowerCase()
+// repeat()
+// startsWith("")
+// endsWith("")
+// includes("")
+// replaceAll("this","with this")
+// padStart(15,"with this till lenght is 15")
+// padEnd(15,"with this till lenght is 15")
+let str = " Abhirup Singh ";
+console.log(str.charAt(4));
+console.log(str.indexOf("i"));
+console.log(str.lastIndexOf("i"));
+console.log(str.length);
+console.log(str.trim());
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+console.log(str.repeat(2));
+console.log(str.startsWith("A"));
+console.log(str.endsWith("h"));
+console.log(str.includes("e"));
+console.log(str.replaceAll("i","n"));
+console.log(str.padStart(20,"n"));
+console.log(str.padEnd(20,"n"));
 
 
