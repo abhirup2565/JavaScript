@@ -177,15 +177,21 @@ let female=document.getElementById('female');
 let age;
 submit.onclick=function(){
     age= document.getElementById('age').value;
-    if(male.ariaChecked)
+    if(male.checked){
+        console.log("male");
+    }
+    else if(female.checked)
+    {
+        console.log("female");
+    }
     if(age>18){
-    display.textContent=`you are an adult ${gender}`;
+    display.textContent=`you are an adult `;
     }
     else if(age>13){
-        display.textContent=`you are teen ${gender}`;
+        display.textContent=`you are teen `;
     }
     else{
-        display.textContent=`you are a kid ${gender}`;
+        display.textContent=`you are a kid `;
     }
 }
 
