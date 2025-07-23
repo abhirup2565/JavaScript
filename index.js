@@ -283,13 +283,40 @@ console.log(str.padEnd(20,"n"));
 // ==equality operator: checks  value
 // ===strict equality: checks value aswell as data type
 
-const PI=3.14;
-if("3.14"===PI)
+// const PI=3.14;
+// if("3.14"===PI)
+// {
+//     console.log("equal");
+// }
+// else
+// {
+//     console.log("not equal");
+// }
+
+
+//-----------------loops--------------------
+//while
+// let allow=false;
+// while(!allow){
+//     let msg=window.prompt("mummy can i go?");
+//     if(msg==="go")
+//     {
+//         allow=true;
+//     }
+// }
+//do while
+// let allow=false;
+// do{
+//     let msg=window.prompt("mummy can i go?");
+//     if(msg==="go")
+//     {
+//         allow=true;
+//     }
+// }while(!allow)
+//for
+for(let i=1;i<=20;i++)
 {
-    console.log("equal");
+    console.log(i);
 }
-else
-{
-    console.log("not equal");
-}
+
 
