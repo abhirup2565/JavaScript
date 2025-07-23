@@ -272,9 +272,24 @@ console.log(str.padEnd(20,"n"));
 */
 
 
-//string slice
+//--------------string slice---------------------
 // slice(start,end)
-const EMAIL="abhirup2565@gmail.com";
-console.log(EMAIL.slice(0,EMAIL.indexOf('@')));
-console.log(EMAIL.slice(EMAIL.indexOf('@')));
+// const EMAIL="abhirup2565@gmail.com";
+// console.log(EMAIL.slice(0,EMAIL.indexOf('@')));
+// console.log(EMAIL.slice(EMAIL.indexOf('@')));
+
+//-----------Strict equality operator-------------------------
+// =asignment operator
+// ==equality operator: checks  value
+// ===strict equality: checks value aswell as data type
+
+const PI=3.14;
+if("3.14"===PI)
+{
+    console.log("equal");
+}
+else
+{
+    console.log("not equal");
+}
 
