@@ -238,7 +238,7 @@ switch(day)
 }
 */
 
-//String methods
+//String methods: all are passed by value
 // charAt()
 // indexOf()
 // lastIndexOf()
@@ -253,6 +253,7 @@ switch(day)
 // replaceAll("this","with this")
 // padStart(15,"with this till lenght is 15")
 // padEnd(15,"with this till lenght is 15")
+/*
 let str = " Abhirup Singh ";
 console.log(str.charAt(4));
 console.log(str.indexOf("i"));
@@ -268,5 +269,12 @@ console.log(str.includes("e"));
 console.log(str.replaceAll("i","n"));
 console.log(str.padStart(20,"n"));
 console.log(str.padEnd(20,"n"));
+*/
 
+
+//string slice
+// slice(start,end)
+const EMAIL="abhirup2565@gmail.com";
+console.log(EMAIL.slice(0,EMAIL.indexOf('@')));
+console.log(EMAIL.slice(EMAIL.indexOf('@')));
 
