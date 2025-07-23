@@ -318,6 +318,7 @@ console.log(str.padEnd(20,"n"));
 // {
 //     console.log(i);
 // }
+//for(let fruit of fruits){}
 
 //-------------number guessing game--------------------
 // const max = 10;
@@ -337,3 +338,31 @@ console.log(str.padEnd(20,"n"));
 //     return num%2===0?true:false;
 // }
 // console.log(even(6));
+
+
+//----------Arrays-----------------
+// push() appends
+// pop() remove last element
+// unshift() append at front
+// shift() remove from front
+// length
+// indexOf()
+// sort()//changes to reference
+// reverse()//changes to reference
+
+
+// let fruits=["Apple","Banana","Grapes","Mango"];
+// fruits.push("friut");
+// fruits.pop();
+// fruits.unshift("fruit");
+// fruits.shift();
+// console.log(fruits.length);
+// console.log(fruits.indexOf("Apple"));
+// console.log(fruits.includes("Apple"));
+// fruits.sort();
+// fruits.reverse();
+// for(fruit of fruits)
+// {
+//     console.log(fruit);
+
+// }
