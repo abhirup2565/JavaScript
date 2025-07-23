@@ -314,9 +314,21 @@ console.log(str.padEnd(20,"n"));
 //     }
 // }while(!allow)
 //for
-for(let i=1;i<=20;i++)
+// for(let i=1;i<=20;i++)
+// {
+//     console.log(i);
+// }
+
+//-------------number guessing game--------------------
+const max = 10;
+const min = 0;
+const ANS=Math.round((Math.random()*(max-min))+min);
+console.log(ANS)
+let guess;
+while(guess!==ANS)
 {
-    console.log(i);
+    guess=Number(window.prompt("guess the no between 0 and 10"));
 }
+window.alert("You are correct");
 
 
