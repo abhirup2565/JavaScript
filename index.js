@@ -169,13 +169,26 @@ is a multilen comments */
 // }
 //------------------------------------------------
 //if statement
-let age=13;
-if(age>18){
-    console.log("you are an adult");
+
+let submit=document.getElementById('submit');
+let display=document.getElementById('display');
+let male=document.getElementById('male');
+let female=document.getElementById('female');
+let age;
+submit.onclick=function(){
+    age= document.getElementById('age').value;
+    if(male.ariaChecked)
+    if(age>18){
+    display.textContent=`you are an adult ${gender}`;
+    }
+    else if(age>13){
+        display.textContent=`you are teen ${gender}`;
+    }
+    else{
+        display.textContent=`you are a kid ${gender}`;
+    }
 }
-else if(age>13){
-    console.log("you are teen");
-}
-else{
-    console.log("you are a kid");
-}
+
+
+
+
