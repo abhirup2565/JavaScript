@@ -577,30 +577,73 @@ of parent call
 this= present object
 super= parent object */
 
-class Animal{
-    constructor(name,type){
-        this.name=name;
-        this.type=type;
-    }
-    eat()
-    {
-        console.log(`${this.name} is eating`);
-    }
-    sleep()
-    {
-        console.log(`${this.name} is sleeping`);
-    }
-}
-class Rabit extends Animal{
-    constructor(name,type)
-    {
-        super(name,type);
-        this.jump=5;
-    }
-}
-const rabit = new Rabit("Robin","Terestrial")
-rabit.eat();
-rabit.sleep();
+// class Animal{
+//     constructor(name,type){
+//         this.name=name;
+//         this.type=type;
+//     }
+//     eat()
+//     {
+//         console.log(`${this.name} is eating`);
+//     }
+//     sleep()
+//     {
+//         console.log(`${this.name} is sleeping`);
+//     }
+// }
+// class Rabit extends Animal{
+//     constructor(name,type)
+//     {
+//         super(name,type);
+//         this.jump=5;
+//     }
+// }
+// const rabit = new Rabit("Robin","Terestrial")
+// rabit.eat();
+// rabit.sleep();
 
 
 //------getter and setter----------
+/*
+getter=special method that make a property readable
+setter= special method that make a property writeable
+
+getter and setter are called when using this.attribute
+so if name is same it will end it recursive call to avoid use this._variable
+in constructor dont use _ or else you by pass set and get method
+*/
+class Rectangle{
+    constructor(width,height){
+        this.width=width;
+        this.height=height;
+    }
+
+    set width(newWidth){
+        if(newWidth>0){
+            this._width=newWidth;
+        }
+        else{
+            console.error("width must be positive");
+        }
+    }
+
+    set height(newHeight){
+        if(newHeight>0){
+            this._height=newHeight;
+        }
+        else{
+            console.error("height must be positive");
+        }
+    }
+
+    get width(){
+        return this._width;
+    }
+    get height(){
+        return this._height;
+    }
+}
+
+const rect=new Rectangle(-100,-32);
+console.log(rect.height);
+console.log(rect.width);
