@@ -458,7 +458,27 @@ dis advantage: 1)callback hell 2)
 
 //---------arrow function---------
 //concise way to write a function
-let a=()=>{
-    console.log("hello");
+// let a=()=>{
+//     console.log("hello");
+// }
+// a();
+
+//-----object----------
+// a collection of realted properties or methods 
+// can represent a real world object 
+// object  = {
+//     key:value ,
+//     function ()
+// }
+
+const person ={
+    name:"abhirup",
+    age:25,
+    isEmployed:true,
+    sayHello:()=>{return console.log("hi this is a function")}
 }
-a();
+console.log(person);
+console.log(person.name);
+console.log(person.age);
+console.log(person.isEmployed);
+person.sayHello();
