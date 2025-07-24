@@ -434,12 +434,25 @@ dis advantage: 1)callback hell 2)
 //creates a new array by filtering out elements
 //takes function as argument and passes each element as argument to that function
 
-let numbers =[1,2,3,4,5,6,7,8,9];
-let even=numbers.filter(isEven);
-console.log(even);
-function isEven(element){
-    return element%2===0;
-}
-//----------Reduce--------------
+// let numbers =[1,2,3,4,5,6,7,8,9];
+// let even=numbers.filter(isEven);
+// console.log(even);
+// function isEven(element){
+//     return element%2===0;
+// }
 
+//----------Reduce--------------
+//reduce array to single element 
+//function take argument and return the value to it
+//first value of function is taken as ans variable
+//all iterative info are stored there
+
+let numbers =[1,2,3,4,5,6,7,8,9];
+let even=numbers.reduce(sum);
+console.log(even);
+function sum(acc,element){
+    console.log(acc);
+    console.log(element);
+    return acc+element;
+}
 //---------arrow function---------
