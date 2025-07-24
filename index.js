@@ -377,8 +377,28 @@ console.log(str.padEnd(20,"n"));
 // opposite to spread op
 
 
-function eat(...fruits)
-{
-    console.log(fruits);
+// function eat(...fruits)
+// {
+//     console.log(fruits);
+// }
+// eat("mango","banana","grapes","Apple")
+
+//-------------------------Call back-----------------------
+/*
+a function that is passed as an argumrnt to another function
+asynchronous
+calling the function that was passed it argument after execting itself
+call function b after executing a (callback b)
+
+dis advantage: 1)callback hell 2)
+*/
+function hello(callback){
+    console.log("Hello ji");
+    callback();
 }
-eat("mango","banana","grapes","Apple")
+function bye(){
+    console.log("bye ji");
+}
+setTimeout(hello,5000,bye);
+
+
