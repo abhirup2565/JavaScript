@@ -540,15 +540,33 @@ it is blueprint
 defines properties or method that belong to class itself rather than the 
 object crated from that  class 
 */
-class MathUtil{
-    static PI=3.14;
-    static getDia(radius){
-        return radius*2;
+// class MathUtil{
+//     static PI=3.14;
+//     static getDia(radius){
+//         return radius*2;
+//     }
+//     static getCir(radius){
+//         return 2*this.PI*radius;
+//     }
+// }
+// console.log(MathUtil.PI);
+// console.log(MathUtil.getDia(10));
+// console.log(MathUtil.getCir(10));
+
+//-------------inheritance---------
+class Animal{
+    eat()
+    {
+        console.log(`${this.name} is eating`);
     }
-    static getCir(radius){
-        return 2*this.PI*radius;
+    sleep()
+    {
+        console.log(`${this.name} is sleeping`);
     }
 }
-console.log(MathUtil.PI);
-console.log(MathUtil.getDia(10));
-console.log(MathUtil.getCir(10));
+class Rabit extends Animal{
+    name="Rabit";
+}
+const rabit = new Rabit()
+rabit.eat();
+rabit.sleep();
