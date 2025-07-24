@@ -554,7 +554,34 @@ object crated from that  class
 // console.log(MathUtil.getCir(10));
 
 //-------------inheritance---------
+// class Animal{
+//     eat()
+//     {
+//         console.log(`${this.name} is eating`);
+//     }
+//     sleep()
+//     {
+//         console.log(`${this.name} is sleeping`);
+//     }
+// }
+// class Rabit extends Animal{
+//     name="Rabit";
+// }
+// const rabit = new Rabit()
+// rabit.eat();
+// rabit.sleep();
+
+//---------super keyword-----------
+/*that used in classes to call the constructor or access the properties or method 
+of parent call
+this= present object
+super= parent object */
+
 class Animal{
+    constructor(name,type){
+        this.name=name;
+        this.type=type;
+    }
     eat()
     {
         console.log(`${this.name} is eating`);
@@ -565,8 +592,15 @@ class Animal{
     }
 }
 class Rabit extends Animal{
-    name="Rabit";
+    constructor(name,type)
+    {
+        super(name,type);
+        this.jump=5;
+    }
 }
-const rabit = new Rabit()
+const rabit = new Rabit("Robin","Terestrial")
 rabit.eat();
 rabit.sleep();
+
+
+//------getter and setter----------
