@@ -515,24 +515,40 @@ ES6 feature provide more structured and cleaner way to work
 it is blueprint
 */
 
-class Car{
-    constructor(make,model,year,color){
-    this.make=make;
-    this.model=model;
-    this.year=year;
-    this.color=color;
-}
-displayProduct()
-{
-    console.log(this.make);
-    console.log(this.model);
-    console.log(this.year);
-    console.log(this.color);
-}
-}
+// class Car{
+//     constructor(make,model,year,color){
+//     this.make=make;
+//     this.model=model;
+//     this.year=year;
+//     this.color=color;
+// }
+// displayProduct()
+// {
+//     console.log(this.make);
+//     console.log(this.model);
+//     console.log(this.year);
+//     console.log(this.color);
+// }
+// }
+// const car1= new Car("maruti","swift",2001,"white");
+// const car2= new Car("ford","figo",2001,"black");
+// car1.displayProduct();
+// car2.displayProduct();
 
-
-const car1= new Car("maruti","swift",2001,"white");
-const car2= new Car("ford","figo",2001,"black");
-car1.displayProduct();
-car2.displayProduct();
+//-------static-------------
+/* 
+defines properties or method that belong to class itself rather than the 
+object crated from that  class 
+*/
+class MathUtil{
+    static PI=3.14;
+    static getDia(radius){
+        return radius*2;
+    }
+    static getCir(radius){
+        return 2*this.PI*radius;
+    }
+}
+console.log(MathUtil.PI);
+console.log(MathUtil.getDia(10));
+console.log(MathUtil.getCir(10));
