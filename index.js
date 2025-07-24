@@ -406,16 +406,26 @@ dis advantage: 1)callback hell 2)
 //for each return element,index,array
 //syntax is unique
 
-let numbers=[1,2,3,4,5,6,7,8,9];
-numbers.forEach(double);
-numbers.forEach(display);
+// let numbers=[1,2,3,4,5,6,7,8,9];
+// numbers.forEach(double);
+// numbers.forEach(display);
 
-function display(element){
-    console.log(element);
+// function display(element){
+//     console.log(element);
+// }
+
+// function double(element,index,array)
+// {
+//     array[index]=element*2;
+// }
+
+//------------map----------
+//similar to for each but returns array after completion
+//map takes function as an argument and passed each element as argument to that function
+
+const num=[1,2,3,4,5];
+const cubes=num.map(square);
+console.log(cubes);
+function square(element){
+    return Math.pow(element,3)
 }
-
-function double(element,index,array)
-{
-    array[index]=element*2;
-}
-
