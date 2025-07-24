@@ -423,9 +423,23 @@ dis advantage: 1)callback hell 2)
 //similar to for each but returns array after completion
 //map takes function as an argument and passed each element as argument to that function
 
-const num=[1,2,3,4,5];
-const cubes=num.map(square);
-console.log(cubes);
-function square(element){
-    return Math.pow(element,3)
+// const num=[1,2,3,4,5];
+// const cubes=num.map(square);
+// console.log(cubes);
+// function square(element){
+//     return Math.pow(element,3)
+// }
+
+//----------filter-----------------
+//creates a new array by filtering out elements
+//takes function as argument and passes each element as argument to that function
+
+let numbers =[1,2,3,4,5,6,7,8,9];
+let even=numbers.filter(isEven);
+console.log(even);
+function isEven(element){
+    return element%2===0;
 }
+//----------Reduce--------------
+
+//---------arrow function---------
