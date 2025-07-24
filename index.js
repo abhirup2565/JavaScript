@@ -392,13 +392,30 @@ call function b after executing a (callback b)
 
 dis advantage: 1)callback hell 2)
 */
-function hello(callback){
-    console.log("Hello ji");
-    callback();
-}
-function bye(){
-    console.log("bye ji");
-}
-setTimeout(hello,5000,bye);
+// function hello(callback){
+//     console.log("Hello ji");
+//     callback();
+// }
+// function bye(){
+//     console.log("bye ji");
+// }
+// setTimeout(hello,5000,bye);
 
+//-----------------for each()--------------
+// display element seperately 
+//for each return element,index,array
+//syntax is unique
+
+let numbers=[1,2,3,4,5,6,7,8,9];
+numbers.forEach(double);
+numbers.forEach(display);
+
+function display(element){
+    console.log(element);
+}
+
+function double(element,index,array)
+{
+    array[index]=element*2;
+}
 
