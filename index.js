@@ -471,14 +471,26 @@ dis advantage: 1)callback hell 2)
 //     function ()
 // }
 
+// const person ={
+//     name:"abhirup",
+//     age:25,
+//     isEmployed:true,
+//     sayHello:()=>{return console.log("hi this is a function")}
+// }
+// console.log(person);
+// console.log(person.name);
+// console.log(person.age);
+// console.log(person.isEmployed);
+// person.sayHello();
+
+//---------------this-----------
+// reference to the object where this is used 
+//does not work with arrow function
 const person ={
     name:"abhirup",
     age:25,
     isEmployed:true,
-    sayHello:()=>{return console.log("hi this is a function")}
+    sayHello:function(){
+        return console.log(`hi this is a ${this.name}`)},
 }
-console.log(person);
-console.log(person.name);
-console.log(person.age);
-console.log(person.isEmployed);
 person.sayHello();
