@@ -484,13 +484,27 @@ dis advantage: 1)callback hell 2)
 // person.sayHello();
 
 //---------------this-----------
-// reference to the object where this is used 
+// reference to the object where this is used. If no object refers to window context 
 //does not work with arrow function
-const person ={
-    name:"abhirup",
-    age:25,
-    isEmployed:true,
-    sayHello:function(){
-        return console.log(`hi this is a ${this.name}`)},
+// const person ={
+//     name:"abhirup",
+//     age:25,
+//     isEmployed:true,
+//     sayHello:function(){
+//         return console.log(`hi this is a ${this.name}`)},
+// }
+// person.sayHello();
+
+
+//----------constructor-------------------
+function Car(make,model,year,color){
+    this.make=make;
+    this.model=model;
+    this.year=year;
+    this.color=color;
 }
-person.sayHello();
+
+const car1= new Car("maruti","swift",2001,"white");
+const car2= new Car("ford","figo",2001,"black");
+console.log(car1);
+console.log(car2);
