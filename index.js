@@ -447,12 +447,18 @@ dis advantage: 1)callback hell 2)
 //first value of function is taken as ans variable
 //all iterative info are stored there
 
-let numbers =[1,2,3,4,5,6,7,8,9];
-let even=numbers.reduce(sum);
-console.log(even);
-function sum(acc,element){
-    console.log(acc);
-    console.log(element);
-    return acc+element;
-}
+// let numbers =[1,2,3,4,5,6,7,8,9];
+// let even=numbers.reduce(sum);
+// console.log(even);
+// function sum(acc,element){
+//     console.log(acc);
+//     console.log(element);
+//     return acc+element;
+// }
+
 //---------arrow function---------
+//concise way to write a function
+let a=()=>{
+    console.log("hello");
+}
+a();
