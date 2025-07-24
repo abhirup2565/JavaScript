@@ -497,14 +497,42 @@ dis advantage: 1)callback hell 2)
 
 
 //----------constructor-------------------
-function Car(make,model,year,color){
+// function Car(make,model,year,color){
+//     this.make=make;
+//     this.model=model;
+//     this.year=year;
+//     this.color=color;
+// }
+
+// const car1= new Car("maruti","swift",2001,"white");
+// const car2= new Car("ford","figo",2001,"black");
+// console.log(car1);
+// console.log(car2);
+
+//----------class-------------
+/*
+ES6 feature provide more structured and cleaner way to work
+it is blueprint
+*/
+
+class Car{
+    constructor(make,model,year,color){
     this.make=make;
     this.model=model;
     this.year=year;
     this.color=color;
 }
+displayProduct()
+{
+    console.log(this.make);
+    console.log(this.model);
+    console.log(this.year);
+    console.log(this.color);
+}
+}
+
 
 const car1= new Car("maruti","swift",2001,"white");
 const car2= new Car("ford","figo",2001,"black");
-console.log(car1);
-console.log(car2);
+car1.displayProduct();
+car2.displayProduct();
