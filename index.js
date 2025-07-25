@@ -658,20 +658,34 @@ in constructor dont use _ or else you by pass set and get method
 
 //--------nested object-------------
 
-const employ={
-    ceo:"abhirup",
-    address:"kharghar",
-    jobs:['hr','tech','it'],
-    employee:{
-        id:"1",
-        name:"Singh",
-        role:"tech"
-    }
-}
+// const employ={
+//     ceo:"abhirup",
+//     address:"kharghar",
+//     jobs:['hr','tech','it'],
+//     employee:{
+//         id:"1",
+//         name:"Singh",
+//         role:"tech"
+//     }
+// }
 
-console.log(employ.ceo);
-console.log(employ.address);
-console.log(employ.jobs);
-console.log(employ.employee.id);
-console.log(employ.employee.name);
-console.log(employ.employee.role);
+// console.log(employ.ceo);
+// console.log(employ.address);
+// console.log(employ.jobs);
+// console.log(employ.employee.id);
+// console.log(employ.employee.name);
+// console.log(employ.employee.role);
+
+//------------sort method----------
+/*
+ method used to sort element of an array in place.
+ sorts elements as  strings in lexicographic order , not alphabetical
+ lexicographic = (alphabet+numbers+symbols) as strings
+ */
+
+ let number = [3,2,1,9,8,7,6,5,4,10];
+ let names = ["abhirup","abhipreet","rinku","abhay"];
+ number.sort((a,b)=>a-b);//else would wrong sort 10
+ names.sort();
+ console.log(number);
+ console.log(names);
