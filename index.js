@@ -712,19 +712,26 @@ in constructor dont use _ or else you by pass set and get method
  * used frequently in js frameworks
  */
 
-function increament()
-{
-    let counter=0;
-    function count()
-    {
-        counter++;
-        console.log(counter);
-    }
-    return count;
-}
+// function increament()
+// {
+//     let counter=0;
+//     function count()
+//     {
+//         counter++;
+//         console.log(counter);
+//     }
+//     return count;
+// }
 
-let a = increament();
-a();
-a();
-a();
-a();
+// let a = increament();
+// a();
+// a();
+// a();
+// a();
+
+
+//------set time out-----------
+function sayHello(){
+    window.alert("hello");
+}
+setTimeout(sayHello,3000);
