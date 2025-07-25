@@ -775,8 +775,14 @@ in constructor dont use _ or else you by pass set and get method
  * finally:Always execute
  */
 console.log("hello");
+let x=0;
 try{
     console.log(x);
+    if(x==0)
+    {
+        throw new Error("x cannot be zero");
+    }
+    console.error("after x is zero");
 }
  catch(error){
      console.error(error);
