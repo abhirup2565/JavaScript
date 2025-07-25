@@ -731,7 +731,26 @@ in constructor dont use _ or else you by pass set and get method
 
 
 //------set time out-----------
-function sayHello(){
-    window.alert("hello");
-}
-setTimeout(sayHello,3000);
+// function sayHello(){
+//     window.alert("hello");
+// }
+// setTimeout(sayHello,3000);
+
+//-------ES6 Module-----------
+/**
+ * an external file that contains reusable code that can be imported into other js files.
+ * Write reusable code for many different apps.
+ * can contain variables, classes ,functions .. and more
+ * Introduce as part of ECMA Scripts 2015 update
+ */
+
+import {PI,getCircumference,getArea,getVolume} from './mathUtil.js';
+
+console.log(PI);
+const circumference=getCircumference(10);
+const area = getArea(10);
+const volume= getVolume(10);
+
+console.log(`${circumference.toFixed(2)}cm`);
+console.log(`${area.toFixed(2)}cm^2`);
+console.log(`${volume.toFixed(2)}cm^3`);
