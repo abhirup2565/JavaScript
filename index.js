@@ -612,38 +612,46 @@ getter and setter are called when using this.attribute
 so if name is same it will end it recursive call to avoid use this._variable
 in constructor dont use _ or else you by pass set and get method
 */
-class Rectangle{
-    constructor(width,height){
-        this.width=width;
-        this.height=height;
-    }
+// class Rectangle{
+//     constructor(width,height){
+//         this.width=width;
+//         this.height=height;
+//     }
 
-    set width(newWidth){
-        if(newWidth>0){
-            this._width=newWidth;
-        }
-        else{
-            console.error("width must be positive");
-        }
-    }
+//     set width(newWidth){
+//         if(newWidth>0){
+//             this._width=newWidth;
+//         }
+//         else{
+//             console.error("width must be positive");
+//         }
+//     }
 
-    set height(newHeight){
-        if(newHeight>0){
-            this._height=newHeight;
-        }
-        else{
-            console.error("height must be positive");
-        }
-    }
+//     set height(newHeight){
+//         if(newHeight>0){
+//             this._height=newHeight;
+//         }
+//         else{
+//             console.error("height must be positive");
+//         }
+//     }
 
-    get width(){
-        return this._width;
-    }
-    get height(){
-        return this._height;
-    }
-}
+//     get width(){
+//         return this._width;
+//     }
+//     get height(){
+//         return this._height;
+//     }
+// }
 
-const rect=new Rectangle(-100,-32);
-console.log(rect.height);
-console.log(rect.width);
+// const rect=new Rectangle(-100,-32);
+// console.log(rect.height);
+// console.log(rect.width);
+
+//------------destructuring------------
+// extract values from array and objects, then assign them to variable in 
+// a convienet way 
+
+const color=["red","green","blue","black","white"];
+[color[0],color[4]]=[color[4],color[0]];
+console.log(color);
