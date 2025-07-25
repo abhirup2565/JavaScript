@@ -683,9 +683,23 @@ in constructor dont use _ or else you by pass set and get method
  lexicographic = (alphabet+numbers+symbols) as strings
  */
 
- let number = [3,2,1,9,8,7,6,5,4,10];
- let names = ["abhirup","abhipreet","rinku","abhay"];
- number.sort((a,b)=>a-b);//else would wrong sort 10
- names.sort();
- console.log(number);
- console.log(names);
+//  let number = [3,2,1,9,8,7,6,5,4,10];
+//  let names = ["abhirup","abhipreet","rinku","abhay"];
+//  number.sort((a,b)=>a-b);//else would wrong sort 10
+//  names.sort();
+//  console.log(number);
+//  console.log(names);
+
+//-----------Date Object-----------------
+/**
+ * Date(Year,month,day,hour,minute,seconds,ms)
+ */
+// const date = new Date(2024,6,23,23,20,20,10);
+// const date1=new Date("2021-06-02T12:00:00");
+// console.log(date);
+// console.log(date1);
+const date = new Date();
+const year=date.getFullYear();
+date.setFullYear(2001);
+console.log(date);
+
