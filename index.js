@@ -698,8 +698,33 @@ in constructor dont use _ or else you by pass set and get method
 // const date1=new Date("2021-06-02T12:00:00");
 // console.log(date);
 // console.log(date1);
-const date = new Date();
-const year=date.getFullYear();
-date.setFullYear(2001);
-console.log(date);
+// const date = new Date();
+// const year=date.getFullYear();
+// date.setFullYear(2001);
+// console.log(date);
 
+//------------------Closures---------
+/**
+ * a function defined inside of another functions
+ * the inner function has access to the variables
+ * and scope of the outer function
+ * allow for private variables and state maintenance
+ * used frequently in js frameworks
+ */
+
+function increament()
+{
+    let counter=0;
+    function count()
+    {
+        counter++;
+        console.log(counter);
+    }
+    return count;
+}
+
+let a = increament();
+a();
+a();
+a();
+a();
