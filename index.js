@@ -652,6 +652,26 @@ in constructor dont use _ or else you by pass set and get method
 // extract values from array and objects, then assign them to variable in 
 // a convienet way 
 
-const color=["red","green","blue","black","white"];
-[color[0],color[4]]=[color[4],color[0]];
-console.log(color);
+// const color=["red","green","blue","black","white"];
+// [color[0],color[4]]=[color[4],color[0]];
+// console.log(color);
+
+//--------nested object-------------
+
+const employ={
+    ceo:"abhirup",
+    address:"kharghar",
+    jobs:['hr','tech','it'],
+    employee:{
+        id:"1",
+        name:"Singh",
+        role:"tech"
+    }
+}
+
+console.log(employ.ceo);
+console.log(employ.address);
+console.log(employ.jobs);
+console.log(employ.employee.id);
+console.log(employ.employee.name);
+console.log(employ.employee.role);
