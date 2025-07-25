@@ -744,13 +744,44 @@ in constructor dont use _ or else you by pass set and get method
  * Introduce as part of ECMA Scripts 2015 update
  */
 
-import {PI,getCircumference,getArea,getVolume} from './mathUtil.js';
+// import {PI,getCircumference,getArea,getVolume} from './mathUtil.js';
 
-console.log(PI);
-const circumference=getCircumference(10);
-const area = getArea(10);
-const volume= getVolume(10);
+// console.log(PI);
+// const circumference=getCircumference(10);
+// const area = getArea(10);
+// const volume= getVolume(10);
 
-console.log(`${circumference.toFixed(2)}cm`);
-console.log(`${area.toFixed(2)}cm^2`);
-console.log(`${volume.toFixed(2)}cm^3`);
+// console.log(`${circumference.toFixed(2)}cm`);
+// console.log(`${area.toFixed(2)}cm^2`);
+// console.log(`${volume.toFixed(2)}cm^3`);
+
+
+
+//---------Async and Sync------------
+/**
+ * Synchronous=Executes line by line consecutively in a sequential manner
+ * code that waits for an operations to complete.
+ * 
+ * async= Allows multiple operation to be performed concurrently wihtout waiting
+ * Doesnt block the execution flow and allows the program to continue
+ * hadled with: CallBacks,Promises ,Async/Await
+ */
+
+//-----------Error handelling -------------
+/**
+ * cause: Network ,Promise and Security
+ * try:executes potential code 
+ * catch:executes on error 
+ * finally:Always execute
+ */
+console.log("hello");
+try{
+    console.log(x);
+}
+ catch(error){
+     console.error(error);
+ }
+ finally{
+    console.log("this always execute usually to close connection");
+ }
+console.log("you have reached the end!");
