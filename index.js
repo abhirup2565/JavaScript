@@ -774,20 +774,32 @@ in constructor dont use _ or else you by pass set and get method
  * catch:executes on error 
  * finally:Always execute
  */
-console.log("hello");
-let x=0;
-try{
-    console.log(x);
-    if(x==0)
-    {
-        throw new Error("x cannot be zero");
-    }
-    console.error("after x is zero");
-}
- catch(error){
-     console.error(error);
- }
- finally{
-    console.log("this always execute usually to close connection");
- }
-console.log("you have reached the end!");
+// console.log("hello");
+// let x=0;
+// try{
+//     console.log(x);
+//     if(x==0)
+//     {
+//         throw new Error("x cannot be zero");
+//     }
+//     console.error("after x is zero");
+// }
+//  catch(error){
+//      console.error(error);
+//  }
+//  finally{
+//     console.log("this always execute usually to close connection");
+//  }
+// console.log("you have reached the end!");
+
+//----------DOM-----------------
+/**
+ * DOM=Document Object Model
+ * object{} that represents the page you see in the web browser and provides you with an api to interact with it
+ * web browser constructs the dom when it loads an HTML document and structure all the  elements in a tree like representation
+ * javaScript can access the dom to dynamically change the content,structure and style of a web page
+ */
+const username ="Abhirup";
+const welcomeMsg = document.getElementById("welcome-msg");
+welcomeMsg.textContent+=username===""?` Guest`:` ${username}`;
+console.dir(document)
