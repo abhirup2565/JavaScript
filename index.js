@@ -815,8 +815,32 @@ in constructor dont use _ or else you by pass set and get method
 // document.getElementsByTagName()
 // document.querySelector()//first match or none 
 // document.querySelectorAll()
-const fruits=document.getElementsByClassName("fruits");
-console.log(fruits);
-fruits[0].style.backgroundColor="yellow";
-const fruitsEle=document.querySelector(".fruits");
-console.log(fruitsEle);
+// const fruits=document.getElementsByClassName("fruits");
+// console.log(fruits);
+// fruits[0].style.backgroundColor="yellow";
+// const fruitsEle=document.querySelector(".fruits");
+// console.log(fruitsEle);
+
+//--------------DOM Navigation----------------
+/**
+ * process of navigating through the structure the structure of  an HTML document using JAVASCRIPT
+ * .firstElementChild
+ * .lastElementChild
+ * nextElementSibling
+ * .previousElementSibling
+ * .parentElement 
+ * .children
+ */
+// const element =document.getElementById("fruits");
+// const firstChild= element.firstElementChild;
+// firstChild.style.backgroundColor="yellow";
+
+// const ulElements=document.querySelectorAll("ul");
+// ulElements.forEach( ulElement=>{
+//     const firstChild=ulElement.firstElementChild;
+//     firstChild.style.backgroundColor="yellow";
+// })
+
+const element =document.getElementById("fruits");
+const lastchild=element.lastElementChild;
+lastchild.style.backgroundColor="Yellow";
