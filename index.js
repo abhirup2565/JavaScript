@@ -799,7 +799,24 @@ in constructor dont use _ or else you by pass set and get method
  * web browser constructs the dom when it loads an HTML document and structure all the  elements in a tree like representation
  * javaScript can access the dom to dynamically change the content,structure and style of a web page
  */
-const username ="Abhirup";
-const welcomeMsg = document.getElementById("welcome-msg");
-welcomeMsg.textContent+=username===""?` Guest`:` ${username}`;
-console.dir(document)
+// const username ="Abhirup";
+// const welcomeMsg = document.getElementById("welcome-msg");
+// welcomeMsg.textContent+=username===""?` Guest`:` ${username}`;
+// console.dir(document)
+
+//--------------Element Selector----------------
+/**
+ * element selctors = Methods used to target and manipulate HTML elements 
+ * They allow you to select one or multiple HTML elements
+ * form the dom 
+ */
+// document.getElementById()
+// document.getElementsByClassName()
+// document.getElementsByTagName()
+// document.querySelector()//first match or none 
+// document.querySelectorAll()
+const fruits=document.getElementsByClassName("fruits");
+console.log(fruits);
+fruits[0].style.backgroundColor="yellow";
+const fruitsEle=document.querySelector(".fruits");
+console.log(fruitsEle);
