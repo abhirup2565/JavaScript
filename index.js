@@ -841,6 +841,29 @@ in constructor dont use _ or else you by pass set and get method
 //     firstChild.style.backgroundColor="yellow";
 // })
 
-const element =document.getElementById("fruits");
-const lastchild=element.lastElementChild;
-lastchild.style.backgroundColor="Yellow";
+// const element =document.getElementById("fruits");
+// const lastchild=element.lastElementChild;
+// lastchild.style.backgroundColor="Yellow";
+
+//----------Add and change HTML---------------------
+//appends and prepends work on id 
+//on child of an id or parent use insetBefore(item,itembefore)
+//step1: Create the element
+const newListItem=document.createElement("li");
+
+//step2:Add attributes/properties
+newListItem.textContent="coconut";
+newListItem.id="coconut";
+newListItem.style.fontWeight="bold";
+newListItem.style.backgroundColor="lightgreen";
+
+//Step3 Append element to dom
+//document.body.append(newListItem);
+//document.body.prepend(newListItem);
+//document.getElementById("vegetables").append(newListItem);
+const vegetables=document.querySelectorAll(".vegetables li");
+document.getElementById("vegetables").insertBefore(newListItem,vegetables[1])
+
+
+//Remove HTML ELement
+document.getElementById("vegetables").removeChild(newListItem);
