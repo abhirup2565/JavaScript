@@ -849,21 +849,51 @@ in constructor dont use _ or else you by pass set and get method
 //appends and prepends work on id 
 //on child of an id or parent use insetBefore(item,itembefore)
 //step1: Create the element
-const newListItem=document.createElement("li");
+//const newListItem=document.createElement("li");
 
 //step2:Add attributes/properties
-newListItem.textContent="coconut";
-newListItem.id="coconut";
-newListItem.style.fontWeight="bold";
-newListItem.style.backgroundColor="lightgreen";
+// newListItem.textContent="coconut";
+// newListItem.id="coconut";
+// newListItem.style.fontWeight="bold";
+// newListItem.style.backgroundColor="lightgreen";
 
 //Step3 Append element to dom
 //document.body.append(newListItem);
 //document.body.prepend(newListItem);
 //document.getElementById("vegetables").append(newListItem);
-const vegetables=document.querySelectorAll(".vegetables li");
-document.getElementById("vegetables").insertBefore(newListItem,vegetables[1])
+//const vegetables=document.querySelectorAll(".vegetables li");
+//document.getElementById("vegetables").insertBefore(newListItem,vegetables[1])
 
 
 //Remove HTML ELement
-document.getElementById("vegetables").removeChild(newListItem);
+//document.getElementById("vegetables").removeChild(newListItem);
+
+
+//-------------event listner-------------
+/**
+ * Event =click, mouseover, mouseout
+ * .addEventListner(event,callback)
+ * event.target.property
+ */
+const myBox=document.getElementById("myBox");
+// myBox.addEventListener("click",changeColor);
+// myBox.addEventListener("click",function (event){
+//     event.target.style.backgroundColor="tomato";
+//     event.target.textContent="Ouch!🤕";
+// });
+myBox.addEventListener("click",(event)=>{
+    event.target.style.backgroundColor="tomato";
+    event.target.textContent="Ouch!🤕";
+});
+// function changeColor(event){
+//     event.target.style.backgroundColor="tomato";
+//     event.target.textContent="Ouch!🤕";
+// }
+myBox.addEventListener("mouseover",(event)=>{
+    event.target.style.backgroundColor="yellow";
+    event.target.textContent="Dont hurt me";
+});
+myBox.addEventListener("mouseout",(event)=>{
+    event.target.style.backgroundColor="lightgreen";
+    event.target.textContent="Click Me😃";
+});
