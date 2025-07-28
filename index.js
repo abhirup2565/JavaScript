@@ -958,14 +958,45 @@ in constructor dont use _ or else you by pass set and get method
  */
 
 
-let buttons=document.querySelectorAll(".myButtons");
+// let buttons=document.querySelectorAll(".myButtons");
 // console.log(buttons);
 // buttons.forEach(button=>{
 //     button.style.backgroundColor="green";
 // });
-buttons.forEach(button=>{
-    button.addEventListener("click",event=>{
-        event.target.style.backgroundColor="green";
-    })
+// buttons.forEach(button=>{
+//     button.addEventListener("click",event=>{
+//         event.target.style.backgroundColor="green";
+//     })
+// });
+
+//------------------class list------------
+// Element property in JavaScript used to interact with elements list of classes (CSS classes) Allows you to make reusable classes for many elements across your webpage
+/**
+ * add()
+ * remove()
+ * toggler(remove if present,Add if not)
+ * replace(oldClass,newClass)
+ * contains()
+ */
+const button=document.getElementById("myButton");
+// button.classList.add("enable");
+// button.classList.remove("enable");
+
+// button.addEventListener("mouseover",event=>{
+//     button.classList.toggle("hover");
+// });
+// button.addEventListener("mouseout",event=>{
+//     button.classList.toggle("hover");
+// });
+button.classList.add("enable");
+button.addEventListener("click",event =>{
+    if(event.target.classList.contains("disable")){
+        event.target.textContent+="🤬";
+    }
+    else{
+        event.target.classList.replace("enable","disable")
+    }
 });
+
+
 

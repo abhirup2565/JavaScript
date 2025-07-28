@@ -41,3 +41,22 @@
     background-color: blue;
     color: white;
 }
+.myButton{
+    font-size: 4rem;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+.enable{
+    background-color: blue;
+    color: white;
+}
+.hover{
+    box-shadow: 0 0 10px black;
+    font-weight: bold;
+}
+.disble{
+    background-color: grey;
+    color: #808080c1;
+}
