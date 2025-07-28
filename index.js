@@ -919,33 +919,53 @@ in constructor dont use _ or else you by pass set and get method
 //     myBox.textContent="Click Me😃";
 // });
 
-document.addEventListener("keydown",event=>{
-   if(event.key.startsWith("Arrow")){
-    event.preventDefault();
-    myBox.style.backgroundColor="tomato";
-    myBox.textContent="stop it!"
-    console.log(event.key);
-    switch(event.key){
-        case "ArrowUp":
-            y-=moveAmount;
-            break;
-        case "ArrowDown":
-            y+=moveAmount;
-            break;
-        case "ArrowLeft":
-            x-=moveAmount;
-            break;
-        case "ArrowRight":
-            x+=moveAmount;
-            break;
-    }
-    console.log(x);
-    console.log(y);
-    myBox.style.top=`${y}px`;
-    myBox.style.left=`${x}px`;
-   }
+// document.addEventListener("keydown",event=>{
+//    if(event.key.startsWith("Arrow")){
+//     event.preventDefault();
+//     myBox.style.backgroundColor="tomato";
+//     myBox.textContent="stop it!"
+//     console.log(event.key);
+//     switch(event.key){
+//         case "ArrowUp":
+//             y-=moveAmount;
+//             break;
+//         case "ArrowDown":
+//             y+=moveAmount;
+//             break;
+//         case "ArrowLeft":
+//             x-=moveAmount;
+//             break;
+//         case "ArrowRight":
+//             x+=moveAmount;
+//             break;
+//     }
+//     console.log(x);
+//     console.log(y);
+//     myBox.style.top=`${y}px`;
+//     myBox.style.left=`${x}px`;
+//    }
+// });
+// document.addEventListener("keyup",event=>{
+//     myBox.style.backgroundColor="lightgreen";
+//     myBox.textContent="Click Me😃"});
+
+//------------------Node List------
+/**
+ * Static collection of HTML elements by(id,class,element)
+ * can be created by using querySelectorAll()
+ * Similar to an array,but no (map filter reduce)
+ * nodelist wont update to automatically reflect changes
+ */
+
+
+let buttons=document.querySelectorAll(".myButtons");
+// console.log(buttons);
+// buttons.forEach(button=>{
+//     button.style.backgroundColor="green";
+// });
+buttons.forEach(button=>{
+    button.addEventListener("click",event=>{
+        event.target.style.backgroundColor="green";
+    })
 });
-document.addEventListener("keyup",event=>{
-    myBox.style.backgroundColor="lightgreen";
-    myBox.textContent="Click Me😃"});
 
