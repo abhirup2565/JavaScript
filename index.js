@@ -875,25 +875,77 @@ in constructor dont use _ or else you by pass set and get method
  * .addEventListner(event,callback)
  * event.target.property
  */
-const myBox=document.getElementById("myBox");
+// const myBox=document.getElementById("myBox");
 // myBox.addEventListener("click",changeColor);
 // myBox.addEventListener("click",function (event){
 //     event.target.style.backgroundColor="tomato";
 //     event.target.textContent="Ouch!🤕";
 // });
-myBox.addEventListener("click",(event)=>{
-    event.target.style.backgroundColor="tomato";
-    event.target.textContent="Ouch!🤕";
-});
+// myBox.addEventListener("click",(event)=>{
+//     event.target.style.backgroundColor="tomato";
+//     event.target.textContent="Ouch!🤕";
+// });
 // function changeColor(event){
 //     event.target.style.backgroundColor="tomato";
 //     event.target.textContent="Ouch!🤕";
 // }
-myBox.addEventListener("mouseover",(event)=>{
-    event.target.style.backgroundColor="yellow";
-    event.target.textContent="Dont hurt me";
+// myBox.addEventListener("mouseover",(event)=>{
+//     event.target.style.backgroundColor="yellow";
+//     event.target.textContent="Dont hurt me";
+// });
+// myBox.addEventListener("mouseout",(event)=>{
+//     event.target.style.backgroundColor="lightgreen";
+//     event.target.textContent="Click Me😃";
+// });
+
+//-----------Key events-----
+// listen to specific events to create interactive web pages 
+// events: keydown, keyup, 
+// document.addEventListener(event,callback);
+// const myBox=document.getElementById("myBox");
+// const moveAmount=10;
+// let x=0;
+// let y=0;
+// document.addEventListener("keydown",event=>{
+//     myBox.style.backgroundColor="yellow";
+//     myBox.textContent="I am Ejoying it";
+// });
+// document.addEventListener("keyup",event=>{
+//     myBox.style.backgroundColor="lightgreen";
+//     myBox.textContent="Click Me😃";
+// });
+// document.addEventListener("keyup",event=>{
+//     myBox.style.backgroundColor="lightgreen";
+//     myBox.textContent="Click Me😃";
+// });
+
+document.addEventListener("keydown",event=>{
+   if(event.key.startsWith("Arrow")){
+    event.preventDefault();
+    myBox.style.backgroundColor="tomato";
+    myBox.textContent="stop it!"
+    console.log(event.key);
+    switch(event.key){
+        case "ArrowUp":
+            y-=moveAmount;
+            break;
+        case "ArrowDown":
+            y+=moveAmount;
+            break;
+        case "ArrowLeft":
+            x-=moveAmount;
+            break;
+        case "ArrowRight":
+            x+=moveAmount;
+            break;
+    }
+    console.log(x);
+    console.log(y);
+    myBox.style.top=`${y}px`;
+    myBox.style.left=`${x}px`;
+   }
 });
-myBox.addEventListener("mouseout",(event)=>{
-    event.target.style.backgroundColor="lightgreen";
-    event.target.textContent="Click Me😃";
-});
+document.addEventListener("keyup",event=>{
+    myBox.style.backgroundColor="lightgreen";
+    myBox.textContent="Click Me😃"});
+
