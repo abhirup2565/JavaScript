@@ -1040,11 +1040,82 @@ in constructor dont use _ or else you by pass set and get method
  * PENDING -> Resolved or Rejected
  * new Promise((resolve,reject)=>{aynchronous code}) */
 
+// function walkDog()
+// {
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//         const DogWalk=true;
+//         if(DogWalk)
+//         {
+//             resolve("you walked the dog");
+//         }
+//         else
+//         {
+//             reject("You didnt walked the dog");
+//         }  
+//     },1500);
+//     });
+// }
+// function cleanKitchen()
+// {
+//      return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//         const kitchen=false;
+//         if(kitchen)
+//         {
+//             resolve("You cleaned the kitchen");
+//         }
+//         else
+//         {
+//             reject("you dint cleaned the kitchen");
+//         } 
+//     },2500);
+//     });
+// }
+// function takeOutTrash()
+// {
+//      return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//         const trash=true;
+//         if(trash)
+//         {
+//             resolve("Took out trash");
+//         }
+//         else
+//         {
+//             reject("you dintTook out trash");
+//         }  
+//     },500);
+//     });
+// }
+
+// walkDog().then(value=>{console.log(value);return cleanKitchen()})
+//         .then(value=>{console.log(value);return takeOutTrash()})
+//         .then(value=>{console.log(value);console.log("finished all the chores");})
+//         .catch(error=>console.error(error));
+//this is call back hell method 
+// walkDog(()=>{
+//     cleanKitchen(()=>{
+//         takeOutTrash(()=>{
+//             console.log("finished all the chores");
+//         })
+//     })
+// })
+
+//-------------Async/Await------------------
+/**Async makes a function return a promise
+ * await makes an async function wait for a promise
+ * 
+ * Allows you to write asynchronous code in a synchronous manner 
+ * Async doesnt have resolve or reject parameters 
+ * Everythinh after Await is placed in an event queue
+ */
+
 function walkDog()
 {
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
-        const DogWalk=true;
+        const DogWalk=false;
         if(DogWalk)
         {
             resolve("you walked the dog");
@@ -1060,7 +1131,7 @@ function cleanKitchen()
 {
      return new Promise((resolve,reject)=>{
         setTimeout(()=>{
-        const kitchen=false;
+        const kitchen=true;
         if(kitchen)
         {
             resolve("You cleaned the kitchen");
@@ -1089,15 +1160,23 @@ function takeOutTrash()
     });
 }
 
-walkDog().then(value=>{console.log(value);return cleanKitchen()})
-        .then(value=>{console.log(value);return takeOutTrash()})
-        .then(value=>{console.log(value);console.log("finished all the chores");})
-        .catch(error=>console.error(error));
-//this is call back hell method 
-// walkDog(()=>{
-//     cleanKitchen(()=>{
-//         takeOutTrash(()=>{
-//             console.log("finished all the chores");
-//         })
-//     })
-// })
+async function doChores(){
+    try{
+    const walkDogResult=await walkDog();
+    console.log(walkDogResult);
+
+    const cleanKitchenResult=await cleanKitchen();
+    console.log(cleanKitchenResult);
+    
+    const takeOutTrashResult= await takeOutTrash();
+    console.log(takeOutTrashResult);
+
+    console.log("You finished all the chores !");
+    }
+    catch(error)
+    {
+        console.error(error);
+    }
+    
+}
+doChores();
