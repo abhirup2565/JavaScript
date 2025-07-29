@@ -2,6 +2,8 @@
 // console.log("i love 0");
 // window.alert("This is an alert");
 
+// const { error } = require("console");
+
 
 //this is a comments
 /*hello this 
@@ -1005,27 +1007,97 @@ in constructor dont use _ or else you by pass set and get method
  * use promises +async/await to avoid callback hell
  */
 
-function task1(callback)
-{
-    setTimeout(()=>{
-         console.log("task1 Complete");
-         callback();
-    },2000)
+// function task1(callback)
+// {
+//     setTimeout(()=>{
+//          console.log("task1 Complete");
+//          callback();
+//     },2000)
    
-}
-function task2(callback)
+// }
+// function task2(callback)
+// {
+//     console.log("task2 Complete");
+//     callback();
+// }
+// function task3(callback)
+// {
+//     console.log("task3 Complete");
+//     callback();
+// }
+// function task4()
+// {
+//     console.log("task4 Complete");
+//     console.log("all task is complete")
+// }
+// task1(()=>task2(()=>task3(()=>task4())));//this is call back hell
+
+
+//----------promise----------------
+/**An object that manages asynchronous operations.
+ * Wrap a promise Object around asynchronous code
+ * "I promise to return a value" 
+ * PENDING -> Resolved or Rejected
+ * new Promise((resolve,reject)=>{aynchronous code}) */
+
+function walkDog()
 {
-    console.log("task2 Complete");
-    callback();
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+        const DogWalk=true;
+        if(DogWalk)
+        {
+            resolve("you walked the dog");
+        }
+        else
+        {
+            reject("You didnt walked the dog");
+        }  
+    },1500);
+    });
 }
-function task3(callback)
+function cleanKitchen()
 {
-    console.log("task3 Complete");
-    callback();
+     return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+        const kitchen=false;
+        if(kitchen)
+        {
+            resolve("You cleaned the kitchen");
+        }
+        else
+        {
+            reject("you dint cleaned the kitchen");
+        } 
+    },2500);
+    });
 }
-function task4()
+function takeOutTrash()
 {
-    console.log("task4 Complete");
-    console.log("all task is complete")
+     return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+        const trash=true;
+        if(trash)
+        {
+            resolve("Took out trash");
+        }
+        else
+        {
+            reject("you dintTook out trash");
+        }  
+    },500);
+    });
 }
-task1(()=>task2(()=>task3(()=>task4())));//this is call back hell
+
+walkDog().then(value=>{console.log(value);return cleanKitchen()})
+        .then(value=>{console.log(value);return takeOutTrash()})
+        .then(value=>{console.log(value);console.log("finished all the chores");})
+        .catch(error=>console.error(error));
+//this is call back hell method 
+// walkDog(()=>{
+//     cleanKitchen(()=>{
+//         takeOutTrash(()=>{
+//             console.log("finished all the chores");
+//         })
+//     })
+// })
