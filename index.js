@@ -978,7 +978,7 @@ in constructor dont use _ or else you by pass set and get method
  * replace(oldClass,newClass)
  * contains()
  */
-const button=document.getElementById("myButton");
+// const button=document.getElementById("myButton");
 // button.classList.add("enable");
 // button.classList.remove("enable");
 
@@ -988,15 +988,44 @@ const button=document.getElementById("myButton");
 // button.addEventListener("mouseout",event=>{
 //     button.classList.toggle("hover");
 // });
-button.classList.add("enable");
-button.addEventListener("click",event =>{
-    if(event.target.classList.contains("disable")){
-        event.target.textContent+="🤬";
-    }
-    else{
-        event.target.classList.replace("enable","disable")
-    }
-});
+// button.classList.add("enable");
+// button.addEventListener("click",event =>{
+//     if(event.target.classList.contains("disable")){
+//         event.target.textContent+="🤬";
+//     }
+//     else{
+//         event.target.classList.replace("enable","disable")
+//     }
+// });
 
+//--------Callback Hell-----------------------
+/**
+ * Situation in js where callback are nested within other callbacks to the degree where the code is difficult to read.
+ * old pattern to hand asynchronous functions.
+ * use promises +async/await to avoid callback hell
+ */
 
-
+function task1(callback)
+{
+    setTimeout(()=>{
+         console.log("task1 Complete");
+         callback();
+    },2000)
+   
+}
+function task2(callback)
+{
+    console.log("task2 Complete");
+    callback();
+}
+function task3(callback)
+{
+    console.log("task3 Complete");
+    callback();
+}
+function task4()
+{
+    console.log("task4 Complete");
+    console.log("all task is complete")
+}
+task1(()=>task2(()=>task3(()=>task4())));//this is call back hell
