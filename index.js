@@ -1191,30 +1191,18 @@ in constructor dont use _ or else you by pass set and get method
  * JSON,stringify()=convers a JS object to a JSON string
  * JSON.parse()=converts a JSON string to a JS Object
  */
-const names=["abhirup","abhipreet","samir","neelam"];
-const person={
-    "name":"abhirup",
-    "age":30,
-    "isEmployed":true,
-    "hobbies":["Jellyfishing","Karate","Cooking"]
-};
-const people=[{
-    "name":"abhirup",
-    "age":30,
-    "isEmployed":true
-},
-{
-    "name":"Abhipreet",
-    "age":32,
-    "isEmployed":true
-},
-{
-    "name":"samuel",
-    "age":23,
-    "isEmployed":false
-}
-];
+const json_names=`["abhirup","abhipreet","samir","neelam"]`;
+const json_person=`{"name":"abhirup","age":30,"isEmployed":true,"hobbies":["Jellyfishing","Karate","Cooking"]
+}`;
+const json_people=`[{"name":"abhirup","age":30,"isEmployed":true},
+                {"name":"Abhipreet","age":32,"isEmployed":true},
+                {"name":"samuel","age":23,"isEmployed":false}
+]`;
 //const jsonString=JSON.stringify(names);
 //const jsonString=JSON.stringify(person);
-const jsonString=JSON.stringify([people]);
-console.log(jsonString);
+// const jsonString=JSON.stringify([people]);
+// console.log(jsonString);
+
+const parseData=JSON.parse(json_names);
+console.log(json_names);
+console.log(parseData);
